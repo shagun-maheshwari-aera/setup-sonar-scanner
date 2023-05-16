@@ -17,8 +17,6 @@ jobs:
       - name: Setup sonarqube
         uses: ./
       - name: run sonarqube
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: sonar-scanner
           -Dsonar.login=${{ secrets.SONAR_TOKEN }}
           -Dsonar.organization=1corp
